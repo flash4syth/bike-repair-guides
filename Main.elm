@@ -33,21 +33,20 @@ subscriptions model =
 view model =
     div []
         [ h1 []
-            [ text "Hello World!" ]
+            [ text "Bike Stripping" ]
         , Svg.svg
             [ viewBox "0 0 100 100", width "300px" ]
             [ Svg.g []
                 [ Svg.path
-                    [ d "M10,20 L20,10 a10,10 0 0 1 5,-3 h 20"
-
-                    -- [ d "M10,20 L20 10"
+                    [ d
+                        ("M10,20 L20,10 a8,8 0 0 1 5,-3 h 20 a8,8 0 0 1 3,3"
+                            ++ "l 3,6 l 3,-3 l-4,9 l-7.5,-2 l4, -1.9 l-2.3,-4"
+                            ++ "a8,8 0 0 0 -3, -3 h-10"
+                        )
                     , fill "none"
                     , stroke "blue"
-                    , strokeWidth "2"
+                    , strokeWidth "1"
                     ]
-                    []
-                , Svg.circle
-                    [ cx "20", cy "30", r "2", fill "orange" ]
                     []
                 ]
             ]
